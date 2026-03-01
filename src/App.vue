@@ -2,10 +2,6 @@
 
 <template>
   <div class="app-shell">
-    <header class="topbar">
-      <div class="brand">Hurdle</div>
-    </header>
-
     <main class="content">
       <RouterView />
     </main>

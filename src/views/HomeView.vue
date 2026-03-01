@@ -61,16 +61,11 @@ const bestMatches = computed(() => {
 
 <template>
   <section class="page">
-    <h1>Hurdle</h1>
-
     <div class="controls">
-      <label>
-        Word length
-        <select v-model.number="selectedLength">
-          <option :value="4">4 letters</option>
-          <option :value="5">5 letters</option>
-        </select>
-      </label>
+      <select v-model.number="selectedLength">
+        <option :value="4">4 letras</option>
+        <option :value="5">5 letras</option>
+      </select>
 
       <div class="letters">
         <div class="letter-row">
@@ -105,23 +100,26 @@ const bestMatches = computed(() => {
 .page {
   max-width: 640px;
   margin: 0 auto;
-  --cell-size: 56px;
-  --cell-font-size: 2rem;
+  --cell-size: 72px;
+  --cell-font-size: 2.4rem;
 }
 .controls {
   display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-top: 16px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 32px;
 }
 .letters {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  align-items: center;
+  gap: 12px;
 }
 .letter-row {
   display: flex;
-  gap: 8px;
+  gap: 10px;
 }
 .letter-row input {
   width: var(--cell-size);
@@ -138,14 +136,15 @@ label {
 }
 input,
 select {
-  padding: 8px 10px;
+  padding: 12px 16px;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   background: rgba(0, 0, 0, 0.25);
   color: inherit;
+  font-size: 1.05rem;
 }
 .matches {
-  margin-top: 24px;
+  margin-top: 16px;
 }
 .matches ul {
   list-style: none;
